@@ -59,7 +59,14 @@ public class Calculator extends Application {
         btn3.setText("*");
         btn4.setText("/");
         btn5.setText("=");
-
+        
+        // the Multiplication button
+        btn3.setOnAction(e ->{
+            x=Integer.parseInt(txtf1.getText());
+            y=Integer.parseInt(txtf2.getText());
+            Result=x*y;
+        });
+        
         btn5.setOnAction(e ->{
         label2.setText(""+ Result);});
         pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
