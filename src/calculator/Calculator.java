@@ -19,14 +19,15 @@ import javafx.stage.Stage;
  * @author El sayed
  */
 public class Calculator extends Application {
+    int x ,y ,Result;
       // First Number
       TextField txtf1 = new TextField();
       // 2and number
       TextField txtf2 = new TextField();
       // Label of Result
-      Label label2 = new Label();
-      // Label of Result Caption
       Label label3 = new Label();
+      // Label of Result Caption
+      Label label2 = new Label();
 
       @Override
     public void start(Stage primaryStage) {
@@ -58,8 +59,9 @@ public class Calculator extends Application {
         btn3.setText("*");
         btn4.setText("/");
         btn5.setText("=");
-        pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5);
-        label3.setText("The Result is ");
+        pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
+        label2.setText("         The Result of Calculation is    :   ");
+        label3.setText("");
         pane.getChildren().addAll(label2,label3); 
         Scene scene = new Scene(pane, 500, 310);
         
