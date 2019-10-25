@@ -66,7 +66,7 @@ public class Calculator extends Application {
             y=Integer.parseInt(txtf2.getText());
             Result=x*y;
         });
-        
+        // The result
         btn5.setOnAction(e ->{
         label2.setText(""+ Result);});
         pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
