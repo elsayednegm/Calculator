@@ -20,6 +20,7 @@ import javafx.stage.Stage;
  */
 public class Calculator extends Application {
     double x ,y ,Result;
+    char ch ;
       // First Number
       TextField txtf1 = new TextField();
       // 2and number
@@ -63,37 +64,73 @@ public class Calculator extends Application {
         
          //add   
         btn1.setOnAction(e->{
+          
+            if(!txtf1.getText().isEmpty() ){  
+                label1.setText(" + ");  
          x=Integer.parseInt(txtf1.getText());
-         y=Integer.parseInt(txtf2.getText()); 
-         Result=x+y;});
+         ch ='+';
+            }
+        });
+         
         
         //subtract   
         btn2.setOnAction(e->{
+            
+            if(!txtf1.getText().isEmpty()){
+                label1.setText(" - ");  
          x=Integer.parseInt(txtf1.getText());
-         y=Integer.parseInt(txtf2.getText()); 
-         Result=x-y;});
+        ch ='-';
+            }
+        });
         
         // The Multiplication button
         btn3.setOnAction(e ->{
+             
+            if(!txtf1.getText().isEmpty() ){
+             label1.setText(" * "); 
             x=Integer.parseInt(txtf1.getText());
-            y=Integer.parseInt(txtf2.getText());
-            Result=x*y;
+           ch='*';
+            }
         });
         
            // The Division function
         btn4.setOnAction(e ->{
+              
+            if(!txtf1.getText().isEmpty()){
+                label1.setText(" / ");
             x=Integer.parseInt(txtf1.getText());
-            y=Integer.parseInt(txtf2.getText());
-            Result=x/y;
+            ch='/';
+            }
         });
         
         // The result
         btn5.setOnAction(e ->{
-        label2.setText(""+ Result);});
+            if (!txtf2.getText().isEmpty() ){
+                y=Integer.parseInt(txtf2.getText());;
+        switch(ch){
+            case '+' :
+                    Result=x+y;
+                    break ;
+            case '*' :
+                    Result=x*y;
+                    break ;
+            case '-' :
+                    Result=x-y;
+                    break ;        
+            case '/' :
+                    Result=x/y;
+                    break ;
+         
+        }    
+            
+        label2.setText(""+ Result);
+            
+            }});
+        
         pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
-        label2.setText("   The Result of Calculation is    :   ");
-        label3.setText("");
-        pane.getChildren().addAll(label2,label3); 
+        label3.setText("   The Result of Calculation is    :   ");
+        
+        pane.getChildren().addAll(label3,label2); 
         Scene scene = new Scene(pane, 500, 300);
         
         primaryStage.setTitle("CALCULATOR");
