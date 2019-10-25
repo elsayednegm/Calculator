@@ -59,6 +59,9 @@ public class Calculator extends Application {
         btn3.setText("*");
         btn4.setText("/");
         btn5.setText("=");
+
+        btn5.setOnAction(e ->{
+        label2.setText(""+ Result);});
         pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
         label2.setText("         The Result of Calculation is    :   ");
         label3.setText("");
