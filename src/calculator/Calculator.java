@@ -110,12 +110,14 @@ public class Calculator extends Application {
             case '+' :
                     Result=x+y;
                     break ;
-            case '-' :
-                    Result=x-y;
-                    break ;
+  
             case '*' :
                     Result=x*y;
                     break ;
+                    
+             case '-' :
+                    Result=x-y;
+                    break ;   
                     
             case '/' :
                     Result=x/y;
