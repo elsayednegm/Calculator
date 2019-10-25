@@ -19,7 +19,7 @@ import javafx.stage.Stage;
  * @author El sayed
  */
 public class Calculator extends Application {
-    float x ,y ,Result;
+    double x ,y ,Result;
       // First Number
       TextField txtf1 = new TextField();
       // 2and number
@@ -67,13 +67,14 @@ public class Calculator extends Application {
 
         });
         
-        // the Multiplication button
+        // The Multiplication button
         btn3.setOnAction(e ->{
             x=Integer.parseInt(txtf1.getText());
             y=Integer.parseInt(txtf2.getText());
             Result=x*y;
         });
-           // the Division button
+        
+           // The Division function
         btn4.setOnAction(e ->{
             x=Integer.parseInt(txtf1.getText());
             y=Integer.parseInt(txtf2.getText());
@@ -84,10 +85,10 @@ public class Calculator extends Application {
         btn5.setOnAction(e ->{
         label2.setText(""+ Result);});
         pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5); 
-        label2.setText("         The Result of Calculation is    :   ");
+        label2.setText("   The Result of Calculation is    :   ");
         label3.setText("");
         pane.getChildren().addAll(label2,label3); 
-        Scene scene = new Scene(pane, 500, 310);
+        Scene scene = new Scene(pane, 500, 300);
         
         primaryStage.setTitle("CALCULATOR");
         primaryStage.setScene(scene);
