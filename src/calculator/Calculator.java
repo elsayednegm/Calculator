@@ -66,6 +66,13 @@ public class Calculator extends Application {
             y=Integer.parseInt(txtf2.getText());
             Result=x*y;
         });
+           // the Division button
+        btn3.setOnAction(e ->{
+            x=Integer.parseInt(txtf1.getText());
+            y=Integer.parseInt(txtf2.getText());
+            Result=x/y;
+        });
+        
         // The result
         btn5.setOnAction(e ->{
         label2.setText(""+ Result);});
