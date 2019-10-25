@@ -34,7 +34,7 @@ public class Calculator extends Application {
         Label label1 = new Label();
         Label label4 = new Label();
         Label label5 = new Label();
-        label1.setText(" + ");   
+        label1.setText("  ");   
         label4.setText(" X : ");
         label5.setText(" Y : ");
         FlowPane pane = new FlowPane();
@@ -48,7 +48,19 @@ public class Calculator extends Application {
         txtf2.setPrefColumnCount(8);
         
         pane.getChildren().addAll(label4,txtf1,label1,label5,txtf2);
-       
+        Button btn1 = new Button();
+        Button btn2 = new Button();
+        Button btn3 = new Button();
+        Button btn4 = new Button();
+        Button btn5 = new Button();
+        btn1.setText("+");
+        btn2.setText("-");
+        btn3.setText("*");
+        btn4.setText("/");
+        btn5.setText("=");
+        pane.getChildren().addAll(btn1,btn2,btn3 ,btn4 ,btn5);
+        label3.setText("The Result is ");
+        pane.getChildren().addAll(label2,label3); 
         Scene scene = new Scene(pane, 500, 310);
         
         primaryStage.setTitle("CALCULATOR");
