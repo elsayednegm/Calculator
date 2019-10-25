@@ -67,7 +67,7 @@ public class Calculator extends Application {
             Result=x*y;
         });
            // the Division button
-        btn3.setOnAction(e ->{
+        btn4.setOnAction(e ->{
             x=Integer.parseInt(txtf1.getText());
             y=Integer.parseInt(txtf2.getText());
             Result=x/y;
