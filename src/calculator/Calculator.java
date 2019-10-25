@@ -19,7 +19,7 @@ import javafx.stage.Stage;
  * @author El sayed
  */
 public class Calculator extends Application {
-    int x ,y ,Result;
+    float x ,y ,Result;
       // First Number
       TextField txtf1 = new TextField();
       // 2and number
