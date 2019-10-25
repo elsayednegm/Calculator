@@ -102,7 +102,6 @@ public class Calculator extends Application {
             ch='/';
             }
         });
-        
         // The result
         btn5.setOnAction(e ->{
             if (!txtf2.getText().isEmpty() ){
@@ -111,18 +110,18 @@ public class Calculator extends Application {
             case '+' :
                     Result=x+y;
                     break ;
+            case '-' :
+                    Result=x-y;
+                    break ;
             case '*' :
                     Result=x*y;
                     break ;
-            case '-' :
-                    Result=x-y;
-                    break ;        
+                    
             case '/' :
                     Result=x/y;
                     break ;
          
-        }    
-            
+        }         
         label2.setText(""+ Result);
             
             }});
@@ -138,9 +137,7 @@ public class Calculator extends Application {
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
         launch(args);
     }
