@@ -59,13 +59,19 @@ public class Calculator extends Application {
         btn3.setText("*");
         btn4.setText("/");
         btn5.setText("=");
+        
+        
          //add   
         btn1.setOnAction(e->{
          x=Integer.parseInt(txtf1.getText());
          y=Integer.parseInt(txtf2.getText()); 
-         Result=x+y;
-
-        });
+         Result=x+y;});
+        
+        //subtract   
+        btn2.setOnAction(e->{
+         x=Integer.parseInt(txtf1.getText());
+         y=Integer.parseInt(txtf2.getText()); 
+         Result=x-y;});
         
         // The Multiplication button
         btn3.setOnAction(e ->{
